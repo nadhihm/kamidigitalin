@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Globe, ChevronDown, Menu, X, Box, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { Language } from '@/lib/translations';
 
 const WA_NUMBER = "6282179746840";
 
