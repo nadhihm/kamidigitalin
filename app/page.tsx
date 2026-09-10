@@ -110,33 +110,33 @@ export default function Home() {
   const waConsultUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Halo KamiDigitalin, saya ingin konsultasi mengenai pemesanan layanan digital & aplikasi premium.")}`;
 
   return (
-    <div className="space-y-24 pb-20">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-brand-50/80 via-sky-50/40 to-white pt-16 pb-20 border-b border-slate-100">
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-50/80 via-sky-50/40 to-white pt-6 sm:pt-12 pb-12 sm:pb-16 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Content */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/80 border border-brand-200 text-brand-700 font-bold text-xs">
-                <ShieldCheck className="w-4 h-4 text-brand-600" />
+            <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100/80 border border-brand-200 text-brand-700 font-bold text-[11px]">
+                <ShieldCheck className="w-3.5 h-3.5 text-brand-600" />
                 {t.badge_official}
               </div>
 
-              <h1 className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-slate-900 leading-[1.15] tracking-tight">
+              <h1 className="font-heading font-extrabold text-2xl sm:text-4xl lg:text-5xl text-slate-900 leading-[1.15] tracking-tight">
                 {t.hero_title_1}<span className="bg-gradient-text">{t.hero_title_2}</span>{t.hero_title_3}
               </h1>
 
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-slate-600 text-xs sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 {t.hero_subtitle}
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1">
                 <Link
                   href="/produk"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-lg shadow-brand-600/25 hover:shadow-xl transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs shadow-md shadow-brand-600/20 transition-all"
                 >
                   <Layers className="w-4 h-4" /> {t.btn_catalog}
                 </Link>
@@ -144,112 +144,110 @@ export default function Home() {
                   href={waConsultUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm border border-slate-200 shadow-sm transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs border border-slate-200 shadow-xs transition-all"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-600" /> {t.btn_consult_wa}
                 </a>
               </div>
 
               {/* Stats Bar */}
-              <div className="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0">
+              <div className="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
                 <div>
-                  <div className="font-heading font-extrabold text-2xl sm:text-3xl text-brand-600">100+</div>
-                  <div className="text-xs font-semibold text-slate-500 mt-1">{t.stat_clients}</div>
+                  <div className="font-heading font-extrabold text-xl sm:text-2xl text-brand-600">100+</div>
+                  <div className="text-[11px] font-semibold text-slate-500 mt-0.5">{t.stat_clients}</div>
                 </div>
                 <div>
-                  <div className="font-heading font-extrabold text-2xl sm:text-3xl text-brand-600">100%</div>
-                  <div className="text-xs font-semibold text-slate-500 mt-1">{t.stat_guarantee}</div>
+                  <div className="font-heading font-extrabold text-xl sm:text-2xl text-brand-600">100%</div>
+                  <div className="text-[11px] font-semibold text-slate-500 mt-0.5">{t.stat_guarantee}</div>
                 </div>
                 <div>
-                  <div className="font-heading font-extrabold text-2xl sm:text-3xl text-brand-600">5-10 mnt</div>
-                  <div className="text-xs font-semibold text-slate-500 mt-1">{t.stat_speed}</div>
+                  <div className="font-heading font-extrabold text-xl sm:text-2xl text-brand-600">5-10 mnt</div>
+                  <div className="text-[11px] font-semibold text-slate-500 mt-0.5">{t.stat_speed}</div>
                 </div>
               </div>
             </div>
 
             {/* Right Card Stack - 3 Main Service Categories Ordered by Gen-Z Interest */}
             <div className="lg:col-span-5 relative">
-              <div className="relative bg-white border border-slate-200 rounded-3xl p-6 pb-12 shadow-2xl shadow-brand-600/10 space-y-4">
+              <div className="relative bg-white border border-slate-200 rounded-2xl sm:rounded-3xl p-4 sm:p-6 pb-10 shadow-xl shadow-brand-600/10 space-y-3">
                 
                 {/* Header Badge */}
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-rose-500" />
-                    <span className="w-3 h-3 rounded-full bg-amber-500" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500" />
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100 text-xs">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
                   </div>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold">
-                    <Zap className="w-3.5 h-3.5" /> {t.card_header_genz}
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-extrabold">
+                    <Zap className="w-3 h-3" /> {t.card_header_genz}
                   </span>
                 </div>
 
-                {/* Urutan 1 (Gen-Z No.1 Interest): Aplikasi Premium & Tools AI */}
+                {/* Urutan 1: Aplikasi Premium & Tools AI */}
                 <Link 
                   href="/produk"
-                  className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between hover:border-brand-300 hover:bg-brand-50/40 transition group cursor-pointer"
+                  className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between gap-2 hover:border-brand-300 hover:bg-brand-50/40 transition group cursor-pointer"
                 >
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 border border-brand-200 shadow-sm flex items-center justify-center shrink-0">
-                      <Sparkles className="w-7 h-7" />
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 border border-brand-200 shadow-xs flex items-center justify-center shrink-0">
+                      <Sparkles className="w-5 h-5" />
                     </div>
-                    <div>
-                      <div className="flex items-center gap-1.5">
-                        <h4 className="font-bold text-sm text-slate-900 group-hover:text-brand-600 transition">{t.row1_title}</h4>
-                        <span className="bg-brand-100 text-brand-700 text-[10px] font-extrabold px-1.5 py-0.5 rounded">Top 1</span>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1 flex-wrap">
+                        <h4 className="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-brand-600 transition truncate">{t.row1_title}</h4>
+                        <span className="bg-brand-100 text-brand-700 text-[9px] font-extrabold px-1.5 py-0.2 rounded shrink-0">Top 1</span>
                       </div>
-                      <p className="text-xs text-slate-500">{t.row1_desc}</p>
+                      <p className="text-[11px] text-slate-500 truncate">{t.row1_desc}</p>
                     </div>
                   </div>
-                  <span className="font-extrabold text-sm text-brand-600">Rp 5.000~</span>
+                  <span className="font-extrabold text-xs sm:text-sm text-brand-600 shrink-0 ml-1">Rp 52.000~</span>
                 </Link>
 
-                {/* Urutan 2 (Gen-Z No.2 Interest): Asistensi Tugas & Riset Akademik */}
+                {/* Urutan 2: Asistensi Tugas & Riset Akademik */}
                 <Link 
                   href="/akademik"
-                  className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between hover:border-amber-300 hover:bg-amber-50/40 transition group cursor-pointer"
+                  className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between gap-2 hover:border-amber-300 hover:bg-amber-50/40 transition group cursor-pointer"
                 >
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 border border-amber-200 shadow-sm flex items-center justify-center shrink-0">
-                      <BookOpenCheck className="w-7 h-7" />
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 border border-amber-200 shadow-xs flex items-center justify-center shrink-0">
+                      <BookOpenCheck className="w-5 h-5" />
                     </div>
-                    <div>
-                      <div className="flex items-center gap-1.5">
-                        <h4 className="font-bold text-sm text-slate-900 group-hover:text-amber-600 transition">{t.row2_title}</h4>
-                        <span className="bg-amber-100 text-amber-800 text-[10px] font-extrabold px-1.5 py-0.5 rounded">Proses Kilat</span>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1 flex-wrap">
+                        <h4 className="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-amber-600 transition truncate">{t.row2_title}</h4>
+                        <span className="bg-amber-100 text-amber-800 text-[9px] font-extrabold px-1.5 py-0.2 rounded shrink-0">Proses Kilat</span>
                       </div>
-                      <p className="text-xs text-slate-500">{t.row2_desc}</p>
+                      <p className="text-[11px] text-slate-500 truncate">{t.row2_desc}</p>
                     </div>
                   </div>
-                  <span className="font-extrabold text-sm text-amber-600 shrink-0 ml-2">
-                    Rp 20.000~
-                  </span>
+                  <span className="font-extrabold text-xs sm:text-sm text-amber-600 shrink-0 ml-1">Rp 20.000~</span>
                 </Link>
 
-                {/* Urutan 3 (Gen-Z No.3 Interest): Jasa Website & Landing Page */}
+                {/* Urutan 3: Jasa Website & Landing Page */}
                 <Link 
                   href="/website"
-                  className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between hover:border-indigo-300 hover:bg-indigo-50/40 transition group cursor-pointer"
+                  className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between gap-2 hover:border-indigo-300 hover:bg-indigo-50/40 transition group cursor-pointer"
                 >
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 border border-indigo-200 shadow-sm flex items-center justify-center shrink-0">
-                      <Code className="w-7 h-7" />
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 border border-indigo-200 shadow-xs flex items-center justify-center shrink-0">
+                      <Code className="w-5 h-5" />
                     </div>
-                    <div>
-                      <h4 className="font-bold text-sm text-slate-900 group-hover:text-indigo-600 transition">{t.row3_title}</h4>
-                      <p className="text-xs text-slate-500">{t.row3_desc}</p>
+                    <div className="min-w-0">
+                      <h4 className="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-indigo-600 transition truncate">{t.row3_title}</h4>
+                      <p className="text-[11px] text-slate-500 truncate">{t.row3_desc}</p>
                     </div>
                   </div>
-                  <span className="font-extrabold text-sm text-indigo-600 shrink-0 ml-2">Rp 550.000~</span>
+                  <span className="font-extrabold text-xs sm:text-sm text-indigo-600 shrink-0 ml-1">Rp 550.000~</span>
                 </Link>
 
                 {/* Floating Rating Badge */}
-                <div className="absolute -bottom-5 left-4 sm:-left-4 bg-white border border-slate-200 rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3.5 z-20">
-                  <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-500 flex items-center justify-center font-bold shrink-0">
-                    <Star className="w-5 h-5 fill-amber-400" />
+                <div className="absolute -bottom-4 left-3 sm:-left-3 bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-lg flex items-center gap-2.5 z-20">
+                  <div className="w-8 h-8 rounded-lg bg-amber-100 text-amber-500 flex items-center justify-center font-bold shrink-0">
+                    <Star className="w-4 h-4 fill-amber-400" />
                   </div>
                   <div>
-                    <div className="font-extrabold text-sm text-slate-900">5.0 / 5.0 Rating</div>
-                    <div className="text-[11px] text-slate-500">{t.rating_label}</div>
+                    <div className="font-extrabold text-xs text-slate-900">5.0 / 5.0 Rating</div>
+                    <div className="text-[10px] text-slate-500 leading-tight">{t.rating_label}</div>
                   </div>
                 </div>
 
