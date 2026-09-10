@@ -39,6 +39,7 @@ export default function Footer() {
               <li><Link href="/produk" className="hover:text-brand-400 transition">{t.nav_products}</Link></li>
               <li><Link href="/website" className="hover:text-brand-400 transition">{t.nav_web}</Link></li>
               <li><Link href="/akademik" className="hover:text-brand-400 transition">{t.nav_academic}</Link></li>
+              <li><Link href="/photobooth" className="hover:text-brand-400 transition">{t.nav_photobooth}</Link></li>
             </ul>
           </div>
 

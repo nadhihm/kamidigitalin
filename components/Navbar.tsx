@@ -48,6 +48,7 @@ export default function Navbar() {
     { href: '/produk', label: t.nav_products },
     { href: '/website', label: t.nav_web },
     { href: '/akademik', label: t.nav_academic },
+    { href: '/photobooth', label: t.nav_photobooth },
     { href: '/#testimoni', label: t.nav_testimonials },
     { href: '/#faq', label: t.nav_faq },
     { href: '/#kontak', label: t.nav_contact },

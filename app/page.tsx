@@ -15,7 +15,8 @@ import {
   ChevronDown, 
   Zap,
   BookOpenCheck,
-  Sparkles
+  Sparkles,
+  Camera
 } from 'lucide-react';
 
 import { useLanguage } from '@/context/LanguageContext';
@@ -240,6 +241,26 @@ export default function Home() {
                   <span className="font-extrabold text-xs sm:text-sm text-indigo-600 shrink-0 ml-1">Rp 550.000~</span>
                 </Link>
 
+                {/* Urutan 4: Sewa Photobooth Event & Wisuda (@kamiphotoin) */}
+                <Link 
+                  href="/photobooth"
+                  className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between gap-2 hover:border-purple-300 hover:bg-purple-50/40 transition group cursor-pointer"
+                >
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 border border-purple-200 shadow-xs flex items-center justify-center shrink-0">
+                      <Camera className="w-5 h-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1 flex-wrap">
+                        <h4 className="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-purple-600 transition truncate">{t.row4_title}</h4>
+                        <span className="bg-purple-100 text-purple-700 text-[9px] font-extrabold px-1.5 py-0.2 rounded shrink-0">PROMO</span>
+                      </div>
+                      <p className="text-[11px] text-slate-500 truncate">{t.row4_desc}</p>
+                    </div>
+                  </div>
+                  <span className="font-extrabold text-xs sm:text-sm text-purple-600 shrink-0 ml-1">Rp 500.000~</span>
+                </Link>
+
                 {/* Floating Rating Badge */}
                 <div className="absolute -bottom-4 left-3 sm:-left-3 bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-lg flex items-center gap-2.5 z-20">
                   <div className="w-8 h-8 rounded-lg bg-amber-100 text-amber-500 flex items-center justify-center font-bold shrink-0">
@@ -258,91 +279,111 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3 Pillar Services */}
+      {/* 4 Service Pillars */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <span className="inline-block px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-bold text-xs uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+          <span className="inline-block px-3 py-0.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 font-bold text-[11px] uppercase tracking-wider">
             {t.pillars_badge}
           </span>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900">
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
             {t.pillars_title}
           </h2>
-          <p className="text-slate-600 text-base">
+          <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto">
             {t.pillars_desc}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           {/* Card 1 */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-8 card-hover-effect space-y-6 flex flex-col">
-            <div className="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 border border-brand-100 flex items-center justify-center">
-              <Layers className="w-7 h-7" />
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 card-hover-effect space-y-4 flex flex-col justify-between">
+            <div className="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 border border-brand-100 flex items-center justify-center">
+              <Layers className="w-6 h-6" />
             </div>
-            <div className="space-y-2">
-              <h3 className="font-heading font-bold text-xl text-slate-900">{t.pillar1_title}</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+            <div className="space-y-1.5">
+              <h3 className="font-heading font-bold text-base text-slate-900">{t.pillar1_title}</h3>
+              <p className="text-slate-600 text-xs leading-relaxed">
                 {t.pillar1_desc}
               </p>
             </div>
-            <ul className="space-y-2 text-xs text-slate-600 pt-2">
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-600 shrink-0" /> ChatGPT Plus, Google Drive 5TB, Canva Pro</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-600 shrink-0" /> Zoom Pro, CapCut Pro, Perplexity AI</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-600 shrink-0" /> {t.stat_speed}</li>
+            <ul className="space-y-1.5 text-xs text-slate-600 pt-2 border-t border-slate-100">
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-brand-600 shrink-0" /> ChatGPT, Drive 5TB, Canva Pro</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-brand-600 shrink-0" /> Zoom Pro, CapCut, Office 365</li>
             </ul>
             <Link
               href="/produk"
-              className="mt-auto inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-3 transition-all pt-4"
+              className="mt-auto inline-flex items-center gap-2 text-brand-600 font-bold text-xs hover:gap-3 transition-all pt-2"
             >
               {t.popular_link} <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-8 card-hover-effect space-y-6 flex flex-col">
-            <div className="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center">
-              <BookOpenCheck className="w-7 h-7" />
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 card-hover-effect space-y-4 flex flex-col justify-between">
+            <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center">
+              <BookOpenCheck className="w-6 h-6" />
             </div>
-            <div className="space-y-2">
-              <h3 className="font-heading font-bold text-xl text-slate-900">{t.pillar2_title}</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+            <div className="space-y-1.5">
+              <h3 className="font-heading font-bold text-base text-slate-900">{t.pillar2_title}</h3>
+              <p className="text-slate-600 text-xs leading-relaxed">
                 {t.pillar2_desc}
               </p>
             </div>
-            <ul className="space-y-2 text-xs text-slate-600 pt-2">
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0" /> Asistensi Tugas Kuliah, Essay & Makalah</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0" /> Olah Data SPSS, SmartPLS, SEM, Python</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0" /> Pengecekan Turnitin No Repository & Parafrase</li>
+            <ul className="space-y-1.5 text-xs text-slate-600 pt-2 border-t border-slate-100">
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" /> Tugas Kuliah, Essay & Makalah</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" /> Olah Data SPSS & Turnitin Check</li>
             </ul>
             <Link
               href="/akademik"
-              className="mt-auto inline-flex items-center gap-2 text-amber-600 font-bold text-sm hover:gap-3 transition-all pt-4"
+              className="mt-auto inline-flex items-center gap-2 text-amber-600 font-bold text-xs hover:gap-3 transition-all pt-2"
             >
               {t.nav_academic} <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-8 card-hover-effect space-y-6 flex flex-col">
-            <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 border border-indigo-100 flex items-center justify-center">
-              <Code className="w-7 h-7" />
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 card-hover-effect space-y-4 flex flex-col justify-between">
+            <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 border border-indigo-100 flex items-center justify-center">
+              <Code className="w-6 h-6" />
             </div>
-            <div className="space-y-2">
-              <h3 className="font-heading font-bold text-xl text-slate-900">{t.pillar3_title}</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+            <div className="space-y-1.5">
+              <h3 className="font-heading font-bold text-base text-slate-900">{t.pillar3_title}</h3>
+              <p className="text-slate-600 text-xs leading-relaxed">
                 {t.pillar3_desc}
               </p>
             </div>
-            <ul className="space-y-2 text-xs text-slate-600 pt-2">
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" /> Free Domain .COM / .EDGE & Hosting Cloud</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" /> Pengerjaan Terukur 2 - 5 Hari Kerja</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" /> Integrasi WhatsApp Direct Order & Meta SEO</li>
+            <ul className="space-y-1.5 text-xs text-slate-600 pt-2 border-t border-slate-100">
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 shrink-0" /> Free Domain .COM / .EDGE</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 shrink-0" /> Pengerjaan Cepat 2 - 5 Hari</li>
             </ul>
             <Link
               href="/website"
-              className="mt-auto inline-flex items-center gap-2 text-indigo-600 font-bold text-sm hover:gap-3 transition-all pt-4"
+              className="mt-auto inline-flex items-center gap-2 text-indigo-600 font-bold text-xs hover:gap-3 transition-all pt-2"
             >
               {t.nav_web} <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Card 4 */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 card-hover-effect space-y-4 flex flex-col justify-between">
+            <div className="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 border border-purple-100 flex items-center justify-center">
+              <Camera className="w-6 h-6" />
+            </div>
+            <div className="space-y-1.5">
+              <h3 className="font-heading font-bold text-base text-slate-900">{t.pillar4_title}</h3>
+              <p className="text-slate-600 text-xs leading-relaxed">
+                {t.pillar4_desc}
+              </p>
+            </div>
+            <ul className="space-y-1.5 text-xs text-slate-600 pt-2 border-t border-slate-100">
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-purple-600 shrink-0" /> Kamera Sony ZVE-10 & iPad A16</li>
+              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-purple-600 shrink-0" /> Cetak Instant Printer L8050 Pro</li>
+            </ul>
+            <Link
+              href="/photobooth"
+              className="mt-auto inline-flex items-center gap-2 text-purple-600 font-bold text-xs hover:gap-3 transition-all pt-2"
+            >
+              {t.nav_photobooth} <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
