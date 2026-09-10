@@ -57,16 +57,16 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Announcement Bar */}
-      <aside className="bg-brand-900 text-white text-xs py-2 px-4 border-b border-brand-800">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <span className="bg-brand-500 text-white font-extrabold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase">
+      {/* Top Announcement Bar - Hidden on Mobile to keep HP clean & uncluttered */}
+      <aside className="hidden md:block bg-brand-900 text-white text-xs py-2 px-4 border-b border-brand-800">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          <div className="flex items-center gap-2 truncate">
+            <span className="bg-brand-500 text-white font-extrabold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase shrink-0">
               RESMI
             </span>
-            <span className="text-brand-100 font-medium">{t.announcement_msg}</span>
+            <span className="text-brand-100 font-medium truncate">{t.announcement_msg}</span>
           </div>
-          <div className="flex items-center gap-4 text-brand-200">
+          <div className="flex items-center gap-4 text-brand-200 shrink-0 text-xs">
             <a href="https://www.instagram.com/kamidigitalin/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
               @kamidigitalin
             </a>
