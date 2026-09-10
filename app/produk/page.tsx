@@ -70,7 +70,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 412.000',
       priceLifetime: 'Rp 502.000',
       category: 'productivity',
-      icon: Cloud,
+      logo: '/logos/icloud.png',
       features: [
         'Penyimpanan iCloud 2TB',
         'Sinkron semua perangkat Apple',
@@ -106,7 +106,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 272.000',
       priceLifetime: 'Rp 355.000',
       category: 'entertainment',
-      icon: Film,
+      logo: '/logos/netflix.png',
       features: [
         'Nonton film & serial tanpa batas',
         'Kualitas HD / Full HD / 4K',
@@ -123,7 +123,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 322.000',
       priceLifetime: 'Rp 432.000',
       category: 'entertainment',
-      icon: Tv,
+      logo: '/logos/netflix.png',
       features: [
         'Akses premium di 2 perangkat',
         'Kualitas HD / Full HD / 4K',
@@ -140,7 +140,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 322.000',
       priceLifetime: 'Rp 412.000',
       category: 'entertainment',
-      icon: Sparkles,
+      logo: '/logos/disney.png',
       features: [
         'Ribuan film & serial Disney & Marvel',
         'Kualitas hingga 4K Ultra HD',
@@ -157,7 +157,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 222.000',
       priceLifetime: 'Rp 362.000',
       category: 'entertainment',
-      icon: Play,
+      logo: '/logos/youtube.png',
       features: [
         'Tanpa iklan + YouTube Music',
         'Bisa offline & background play',
@@ -174,7 +174,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 302.000',
       priceLifetime: 'Rp 382.000',
       category: 'productivity',
-      icon: FileText,
+      logo: '/logos/office.png',
       features: [
         'Word, Excel, PowerPoint, Outlook',
         '1TB OneDrive cloud storage',
@@ -259,7 +259,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 245.000',
       priceLifetime: 'Rp 302.000',
       category: 'productivity',
-      icon: Video,
+      logo: '/logos/zoom.png',
       features: [
         'Meeting hingga 100 peserta',
         'Fitur lengkap untuk kerja & belajar',
@@ -276,7 +276,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 385.000',
       priceLifetime: 'Rp 502.000',
       category: 'entertainment',
-      icon: Tv,
+      logo: '/logos/vidio.png',
       features: [
         'Nonton Liga 1, Premier League, Serie A',
         'Kualitas tayangan Full HD',
@@ -293,7 +293,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 502.000',
       priceLifetime: 'Rp 602.000',
       category: 'entertainment',
-      icon: Tv,
+      logo: '/logos/vidio.png',
       features: [
         'Paket terlengkap dari Vidio',
         'Semua tayangan olahraga & hiburan',
@@ -310,7 +310,7 @@ export default function ProductsPage() {
       priceYear: 'Rp 962.000',
       priceLifetime: 'Rp 1.200.000',
       category: 'ai',
-      icon: Bot,
+      logo: '/logos/claude.png',
       features: [
         'Akses Claude AI Pro (versi terbaru)',
         'Cocok untuk menulis, analisis, riset',
