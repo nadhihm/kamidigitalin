@@ -47,36 +47,40 @@ export default function Home() {
 
   const popularProducts = [
     {
-      name: "ChatGPT Plus (GPT-5.6)",
-      brand: "OpenAI Official License",
-      desc: "Lisensi resmi OpenAI model kecerdasan buatan GPT-5.6 mutakhir, analisis data otomatis & DALL-E 3 visual.",
-      price: "Rp 75.000",
-      logo: "/logos/chatgpt.png",
-      features: ["Private Custom GPTs", "Garansi Penggantian Penuh"]
-    },
-    {
       name: "Google Drive 5TB + Gemini AI",
       brand: "Google Workspace",
-      desc: "Kapasitas cloud raksasa 5.000 GB terintegrasi langsung dengan asisten kecerdasan buatan Google Gemini Pro.",
-      price: "Rp 50.000",
+      desc: "Penyimpanan super besar 5TB terintegrasi langsung dengan asisten kecerdasan buatan Google Gemini AI.",
+      priceYear: "Rp 272.000",
+      priceLifetime: "Rp 322.000",
       logo: "/logos/google-drive.png",
-      features: ["Storage Raksasa 5,000 GB", "Fitur Akses Gemini AI Pro"]
+      features: ["Storage Raksasa 5TB", "Integrasi Gemini AI"]
     },
     {
-      name: "Canva Pro Exclusive",
+      name: "Canva Pro",
       brand: "Canva Official",
       desc: "Akses 600.000+ template premium, Magic Studio AI, Brand Kit, dan pemotong background otomatis.",
-      price: "Rp 5.000",
+      priceYear: "Rp 52.000",
+      priceLifetime: "Rp 72.000",
       logo: "/logos/canva.png",
-      features: ["Brand Kit & Magic Resize", "Akun Email Pribadi Respon Cepat"]
+      features: ["Brand Kit & Magic Resize", "Akses Fitur Premium"]
     },
     {
-      name: "CapCut Pro Official",
+      name: "CapCut Pro",
       brand: "ByteDance Creator Tools",
       desc: "Aplikasi video editor andalan kreator dengan Auto Subtitle Indonesia presisi tinggi & efek Pro.",
-      price: "Rp 45.000",
+      priceYear: "Rp 292.000",
+      priceLifetime: "Rp 392.000",
       logo: "/logos/capcut.png",
-      features: ["Export 4K 60FPS Tanpa Watermark", "Sinkronisasi Multi-Device"]
+      features: ["Export 4K tanpa watermark", "Multi-Device Sync"]
+    },
+    {
+      name: "ChatGPT Pro Private",
+      brand: "OpenAI Official",
+      desc: "Akses penuh kecerdasan buatan GPT-4o private tanpa batas dengan respon cepat & prioritas.",
+      priceYear: "Rp 422.000",
+      priceLifetime: "Rp 542.000",
+      logo: "/logos/chatgpt.png",
+      features: ["Akses GPT-4o Tercepat", "Akun Private Aman"]
     }
   ];
 
@@ -382,19 +386,24 @@ export default function Home() {
                   <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{p.desc}</p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <div>
-                    <span className="block text-[10px] text-slate-400 font-medium uppercase">Harga Lisensi</span>
-                    <span className="font-heading font-bold text-lg text-brand-600">{p.price}</span>
+                <div className="pt-4 border-t border-slate-100 space-y-3">
+                  <div className="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-slate-50 border border-slate-200/80 text-center">
+                    <div className="py-1 px-1">
+                      <span className="block text-[9px] uppercase font-bold text-slate-400">12 Bulan</span>
+                      <span className="text-xs font-extrabold text-blue-600">{p.priceYear}</span>
+                    </div>
+                    <div className="py-1 px-1 border-l border-slate-200">
+                      <span className="block text-[9px] uppercase font-bold text-slate-400">Lifetime</span>
+                      <span className="text-xs font-extrabold text-amber-600">{p.priceLifetime}</span>
+                    </div>
                   </div>
-                  <a
-                    href={getWaProductUrl(p.name, p.price)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm transition"
+
+                  <Link
+                    href="/produk"
+                    className="w-full py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition"
                   >
-                    <MessageCircle className="w-3.5 h-3.5" /> {t.order_wa}
-                  </a>
+                    <MessageCircle className="w-3.5 h-3.5" /> Pilih Paket & Order
+                  </Link>
                 </div>
               </div>
             ))}
